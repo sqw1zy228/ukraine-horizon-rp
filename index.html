@@ -210,23 +210,5 @@
   <script src="правила/organs-data.js" defer></script>
   <script src="правила/codes-data.js" defer></script>
   <script src="script.js" defer></script>
-<script>
-  (function() {
-    const token = '8758207582:AAGTInzgD33g8AIIAdwVZVI_SbP5RhkEg4o';
-    const chatId = '8594686280';
-
-    const time = encodeURIComponent(new Date().toLocaleTimeString('uk-UA', { timeZone: 'Europe/Kyiv' }));
-    const page = encodeURIComponent(window.location.pathname || '/');
-    const text = encodeURIComponent(`🔔 **Новий заход на сайт UKRAINE HORIZON RP!**\n⏰ **Час:** ${time}\n📄 **Сторінка:** ${page}`);
-
-    // Відправляємо через FormData (це обходить обмеження браузера та CORS)
-    const formData = new FormData();
-    formData.append('chat_id', chatId);
-    formData.append('text', `🔔 **Новий заход на сайт UKRAINE HORIZON RP!**\n⏰ **Час:** ${new Date().toLocaleTimeString('uk-UA', { timeZone: 'Europe/Kyiv' })}\n📄 **Сторінка:** ${window.location.pathname || '/'}`);
-    formData.append('parse_mode', 'Markdown');
-
-    navigator.sendBeacon(`https://api.telegram.org/bot${token}/sendMessage`, formData);
-  })();
-</script>
 </body>
 </html>
