@@ -1,16 +1,4 @@
 "use strict";
-(function sendTelegramVisitor() {
-  const token = '8758207582:AAGTInzgD33g8AIIAdwVZVI_SbP5RhkEg4o';
-  const chatId = '8594686280';
-
-  const time = encodeURIComponent(new Date().toLocaleTimeString('uk-UA', { timeZone: 'Europe/Kyiv' }));
-  const page = encodeURIComponent(window.location.pathname || '/');
-  const text = encodeURIComponent(`🔔 **Новий заход на сайт UKRAINE HORIZON RP!**\n⏰ **Час:** ${time}\n📄 **Сторінка:** ${page}`);
-
-  const img = new Image();
-  img.src = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=Markdown`;
-})();
-
 (function autoReloadOnEntry() {
   const GUARD_KEY = "autoReloadedOnce";
 
