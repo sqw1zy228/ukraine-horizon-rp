@@ -20,19 +20,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="adaptive.css">
 </head>
-<script>
-  (function() {
-    const token = '8758207582:AAGTInzgD33g8AIIAdwVZVI_SbP5RhkEg4o';
-    const chatId = '8594686280';
-
-    const time = encodeURIComponent(new Date().toLocaleTimeString('ru-RU', { timeZone: 'Europe/Kyiv' }));
-    const page = encodeURIComponent(window.location.pathname || '/');
-    const text = encodeURIComponent(`🔔 Новый заход на сайт!\n⏰ Время: ${time}\n📄 Страница: ${page}`);
-
-    const img = new Image();
-    img.src = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
-  })();
-</script>
   <body>
 
   <div class="bg"></div>
@@ -223,5 +210,18 @@
   <script src="правила/organs-data.js" defer></script>
   <script src="правила/codes-data.js" defer></script>
   <script src="script.js" defer></script>
+    <script>
+  (function() {
+    const token = '8758207582:AAGTInzgD33g8AIIAdwVZVI_SbP5RhkEg4o';
+    const chatId = '8594686280';
+
+    const time = encodeURIComponent(new Date().toLocaleTimeString('uk-UA', { timeZone: 'Europe/Kyiv' }));
+    const page = encodeURIComponent(window.location.pathname || '/');
+    const text = encodeURIComponent(`🔔 **Новий заход на сайт UKRAINE HORIZON RP!**\n⏰ **Час:** ${time}\n📄 **Сторінка:** ${page}`);
+
+    const img = new Image();
+    img.src = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=Markdown`;
+  })();
+</script>
 </body>
 </html>
