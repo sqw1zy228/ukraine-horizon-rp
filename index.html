@@ -23,23 +23,15 @@
 <script>
   (function() {
     const token = '8758207582:AAGTInzgD33g8AIIAdwVZVI_SbP5RhkEg4o';
-    const chatId = 8594686280;
+    const chatId = '8594686280';
 
-    // Не отправляем уведомления при локальном тестировании
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
+    const time = encodeURIComponent(new Date().toLocaleTimeString('ru-RU', { timeZone: 'Europe/Kyiv' }));
+    const page = encodeURIComponent(window.location.pathname || '/');
+    const text = encodeURIComponent(`🔔 Новый заход на сайт!\n⏰ Время: ${time}\n📄 Страница: ${page}`);
 
-    const time = new Date().toLocaleTimeString('ru-RU', { timeZone: 'Europe/Kyiv' });
-    const page = window.location.pathname;
-
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: `🔔 **Новый заход на сайт!**\n⏰ **Время:** ${time}\n📄 **Страница:** ${page}`,
-        parse_mode: 'Markdown'
-      })
-    }).catch(err => console.error('Ошибка отправки в TG:', err));
+    // Отправляем запрос через незаметное изображение (работает везде)
+    const img = new Image();
+    img.src = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
   })();
 </script>
   <body>
