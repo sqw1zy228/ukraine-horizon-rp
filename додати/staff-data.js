@@ -70,6 +70,38 @@ const staffData = {
 
     ]
   },
+   {
+         name: "Охоронець суду",
+         nick: "gmmmf1224",
+         telegram: "https://t.me/Myra1274",
+         avatar: "https://postimg.cc/5Q4m4hD8"
+        },
+
+    ]
+  },
+   {
+         name: "Охоронець суду",
+         nick: "Matviy105012",
+         telegram: "https://t.me/NOKIA3310_matvii",
+         avatar: "https://postimg.cc/grxJ5Sx5"
+        },
+     {
+         name: "Охоронець суду",
+         nick: "Anya_wuow35",
+         telegram: "https://t.me/Giko_0303",
+         avatar: "https://postimg.cc/9RRhxkLP"
+        },
+       {
+         name: "Охоронець суду",
+         nick: "roxbennis12",
+         telegram: "https://t.me/czxn7",
+         avatar: "https://postimg.cc/FYswWqRg"
+        },
+
+    ]
+  },
+
+
 
 
   // ==================== ПРОКУРАТУРА ====================
